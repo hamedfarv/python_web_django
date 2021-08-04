@@ -1,0 +1,5 @@
+django-admin startproject pyshop .
+
+python.exe .\manage.py runserver
+
+python.exe .\manage.py startapp product
