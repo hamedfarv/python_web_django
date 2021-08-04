@@ -3,3 +3,7 @@ django-admin startproject pyshop .
 python.exe .\manage.py runserver
 
 python.exe .\manage.py startapp product
+
+python.exe .\manage.py makemigrations
+
+python.exe .\manage.py  migrate
