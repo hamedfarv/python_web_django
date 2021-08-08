@@ -1,6 +1,19 @@
-<h1>Products</h1>
-<ul>
-    {% for p in my_products %}
-        <li>{{ p.name }} ({{ p.price }})</li>
-    {% endfor %}
-</ul>
+{% extends 'base.html'  %}
+{% block content %}
+    <h1>Products</h1>
+    <div class="row">
+        {% for p in my_products %}
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{p.image_url}}" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{p.name}}</h5>
+                  <p class="card-text">${{ p.price }}</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
